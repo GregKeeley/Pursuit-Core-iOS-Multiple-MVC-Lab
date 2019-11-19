@@ -16,53 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNf-Hy-rOd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNf-Hy-rOd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalCell" rowHeight="114" id="dJA-eK-PBV" customClass="AnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="114"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalCell" rowHeight="136" id="dJA-eK-PBV" customClass="AnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJA-eK-PBV" id="gYq-x1-aHh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9r-7j-yVS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9r-7j-yVS">
+                                                    <rect key="frame" x="24" y="18" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="RoU-nZ-1U6"/>
+                                                        <constraint firstAttribute="width" constant="100" id="bvL-4o-esU"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-oR-JM6">
-                                                    <rect key="frame" x="108" y="51" width="55" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-oR-JM6">
+                                                    <rect key="frame" x="132" y="86.5" width="55" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-K4-iT8">
-                                                    <rect key="frame" x="108" y="22" width="55" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-K4-iT8">
+                                                    <rect key="frame" x="132" y="57.5" width="55" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s9r-7j-yVS" firstAttribute="leading" secondItem="gYq-x1-aHh" secondAttribute="leadingMargin" constant="8" id="9g0-7Y-s1h"/>
+                                                <constraint firstItem="s9r-7j-yVS" firstAttribute="centerY" secondItem="gYq-x1-aHh" secondAttribute="centerY" id="A1j-HK-k62"/>
+                                                <constraint firstItem="kpc-oR-JM6" firstAttribute="top" secondItem="cCl-K4-iT8" secondAttribute="bottom" constant="8" id="Ai2-FS-WIv"/>
+                                                <constraint firstItem="kpc-oR-JM6" firstAttribute="leading" secondItem="s9r-7j-yVS" secondAttribute="trailing" constant="8" id="PpD-4z-Qa8"/>
+                                                <constraint firstItem="cCl-K4-iT8" firstAttribute="leading" secondItem="s9r-7j-yVS" secondAttribute="trailing" constant="8" id="aAJ-ob-hVV"/>
+                                                <constraint firstItem="cCl-K4-iT8" firstAttribute="centerY" secondItem="s9r-7j-yVS" secondAttribute="centerY" id="pYz-77-mjl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="animalImage" destination="s9r-7j-yVS" id="UdF-gR-wzz"/>
-                                            <outlet property="cellDescription" destination="kpc-oR-JM6" id="fa0-C8-4tx"/>
+                                            <outlet property="cellCountry" destination="kpc-oR-JM6" id="fa0-C8-4tx"/>
                                             <outlet property="cellTitle" destination="cCl-K4-iT8" id="kr5-Qi-Vln"/>
+                                            <segue destination="J4m-s5-d1k" kind="show" id="BTx-2E-Ew6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="SNf-Hy-rOd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FRn-Me-mg0"/>
-                            <constraint firstItem="SNf-Hy-rOd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fol-Qr-Ljy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SNf-Hy-rOd" secondAttribute="trailing" id="hIc-zS-Qyn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SNf-Hy-rOd" secondAttribute="bottom" id="neb-6C-UzB"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xyp-g5-WGs"/>
@@ -73,6 +78,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Animal Details View Controller-->
+        <scene sceneID="vxu-T6-muX">
+            <objects>
+                <viewController id="J4m-s5-d1k" customClass="AnimalDetailsViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lqk-S1-36h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F43-W4-93v">
+                                <rect key="frame" x="0.0" y="88" width="414" height="358.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUD-Qs-lzd">
+                                <rect key="frame" x="20" y="467" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F43-W4-93v" firstAttribute="height" secondItem="lqk-S1-36h" secondAttribute="height" multiplier="0.4" id="fsO-Ax-Q9h"/>
+                            <constraint firstItem="F43-W4-93v" firstAttribute="top" secondItem="a32-cJ-WFI" secondAttribute="top" id="mht-VH-rSq"/>
+                            <constraint firstItem="F43-W4-93v" firstAttribute="leading" secondItem="a32-cJ-WFI" secondAttribute="leading" id="qQa-Tt-LXQ"/>
+                            <constraint firstItem="F43-W4-93v" firstAttribute="trailing" secondItem="a32-cJ-WFI" secondAttribute="trailing" id="wQy-ZP-LEJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a32-cJ-WFI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6KH-If-E3x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p15-E6-z1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747.826086956522" y="110.49107142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JE5-w6-98q">

@@ -9,11 +9,23 @@
 import UIKit
 
 class AnimalDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var animalImage: UIImageView!
+    @IBOutlet weak var animalDescription: UILabel!
+    
+    var animal: ZooAnimal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
 
-
+    }
+    func updateUI() {
+        guard let theAnimal = animal else {
+            fatalError("Verify the segue for animalDetailsViewController")
+        }
+        animalImage.image = UIImage(named: theAnimal.imageNumber.description)
+        animalDescription.text = theAnimal.info
     }
     
 }

@@ -11,16 +11,16 @@ import UIKit
 class AnimalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellTitle: UILabel!
-       @IBOutlet weak var cellDescription: UILabel!
+       @IBOutlet weak var cellCountry: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        animalImage.layer.cornerRadius = animalImage.frame.width / 2.0
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        animalImage.layer.cornerRadius = animalImage.frame.width / 1.5
+//    }
     func configureCell(for animal: ZooAnimal) {
         cellTitle.text = animal.name
-        cellDescription.text = animal.info
+        cellCountry.text = animal.origin
         animalImage.image = UIImage(named: animal.imageNumber.description)
     }
 }
